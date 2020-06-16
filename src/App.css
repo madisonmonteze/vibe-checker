@@ -17,14 +17,28 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+	background: rgb(155,206,238);
+  background: linear-gradient(90deg, rgba(155,206,238,1) 0%, rgba(255,245,204,1) 30%, rgba(255,245,204,1) 70%, rgba(252,189,255,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .main {
   display: grid;
   grid-template-rows: 25% 50% 25%;
   text-align: center;
-  background: rgb(255,245,204);
-  background: linear-gradient(90deg, rgba(255,245,204,1) 40%, rgba(204,240,255,1) 100%);
   min-height: 100vh;
   font-family: var(--sans-font);
 }
@@ -52,17 +66,24 @@ body {
 .counter-section {
   height: auto;
   font-size: calc(10px + 2vmin);
-  color: var(--blue);
+  color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   font-family: var(--mono-font);
 }
 
 .counter-section h2, .counter-section p {
   font-weight: 300;
-  font-size: 1.4rem;
+}
+
+.counter-section h2 {
+  font-size: 2rem;
+}
+
+.counter-section p, .counter-buttons button {
+  font-size: 1rem;
 }
 
 .counter-buttons button {
@@ -74,13 +95,13 @@ body {
   display: inline-block;
   padding: 0.3em 1.2em;
   margin: 0 0.1em 0.1em 0;
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   border-radius: 2em;
   box-sizing: border-box;
   text-decoration: none;
   color:var(--black);
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   background-color: transparent;
 }
 
@@ -90,14 +111,93 @@ body {
   cursor: pointer;
 } 
 
+.counter-box {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 50%;
+  text-transform: uppercase;
+}
+
 .footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
-.footer a {
-  text-decoration: none;
-  color: var(--black);
+button {
+  background: transparent;
   font-family: var(--serif-font);
+  transition: all 0.5s ease;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.open-button button {
+  color: var(--blue);
+  border-bottom: 1px solid transparent;
+  
+}
+
+.open-button button:hover {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+  
+}
+
+.about-slider {
+  background-color: var(--blue);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  margin-bottom: -1rem;
+  padding: 1rem;
+}
+
+.about-slider button {
+  color: var(--white);
+}
+
+.about-content {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+  color: var(--white);
+  font-family: var(--serif-font);
+  font-style: italic;
+}
+
+.about-content a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+@media (max-width: 425px) {
+  .counter-section h2 {
+    font-size: 1.6rem;
+  }
+  .counter-buttons button {
+    margin: 0.8em auto;
+  }
+  .inc, .dec, .reset {
+    display: block;
+  }
+  .counter-box {
+    width: 100%;
+  }
+  .footer {
+    padding-bottom: 0;
+  }
+  .open-button {
+    padding-bottom: 1rem;
+  }
+  .about-slider {
+    position: fixed;
+    height: auto;
+  }
 }
