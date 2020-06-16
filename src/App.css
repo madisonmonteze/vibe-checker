@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+:root {
+  --sans-font: Arial, Helvetica, sans-serif;
+  --serif-font: 'EB Garamond', serif;
+  --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --blue: #1700FF;
+  --red: #FF0000;
+  --light-yellow: #FFF5CC;
+  --light-brown: #CAB6AB;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 25% 50% 25%;
+  text-align: center;
+  background: rgb(255,245,204);
+  background: linear-gradient(90deg, rgba(255,245,204,1) 40%, rgba(204,240,255,1) 100%);
+  min-height: 100vh;
+  font-family: var(--sans-font);
+}
+
+.header {
+  color: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--serif-font);
+  font-style: italic;
+
+}
+
+.header, .footer {
+  padding: 1em 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.counter-section {
+  height: auto;
+  font-size: calc(10px + 2vmin);
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var(--mono-font);
+}
+
+.counter-section h2, .counter-section p {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.counter-buttons button {
+  margin: 0.8em;
+  font-family: var(--mono-font);
+}
+
+.inc, .dec, .reset {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 2px solid var(--black);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  color:var(--black);
+  text-align: center;
+  transition: all 0.5s;
+  background-color: transparent;
+}
+
+.inc:hover, .dec:hover, .reset:hover {
+  border-color: var(--red);
+  background-color: var(--white);
+  cursor: pointer;
+} 
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--serif-font);
+}
