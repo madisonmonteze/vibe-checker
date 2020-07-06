@@ -15,7 +15,7 @@ class App extends Component {
         
         <div className="footer">          
           <ToggleAbout />
-          <a href="https://madisonmonteze.com" alt="Madison Monteze Hardt" target="_blank" rel="noopener noreferrer"><img alt="Smiley" src="favicon.png"></img></a>
+          <a href="http://madisonhardt.com" alt="Madison Hardt" target="_blank" rel="noopener noreferrer"><img alt="Smiley" src="favicon.png"></img></a>
         </div>
 
       </div>
