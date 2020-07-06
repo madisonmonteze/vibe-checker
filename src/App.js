@@ -27,26 +27,27 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+        count: parseInt(localStorage.getItem("count")) || 0
     };
   }
 
-  increment() {
+  updateCount(newCount) {
     this.setState({
-      count: this.state.count + 1
+        count: newCount
     });
+    localStorage.setItem("count", newCount);
+  }
+
+  increment() {
+    this.updateCount(this.state.count + 1)
   };
   
   decrement() {
-    this.setState({
-      count: this.state.count - 1
-    });
+    this.updateCount(this.state.count - 1);
   };
 
   reset() {
-    this.setState({
-      count: 0
-    });
+    this.updateCount(0);
   };
 
   render() {
