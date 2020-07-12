@@ -89,7 +89,7 @@ class ToggleAbout extends React.Component {
           </div>
 
           <div className="credits">
-            <p>Built with React and CSS by <a href="http://madisonhardt.com" alt="Madison Hardt" target="_blank" rel="noopener noreferrer">Madison Hardt</a>. She can be found on <a href="https://twitter.com/madisonmonteze" alt="@madisonmonteze" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="https://github.com/madisonmonteze" alt="Github" target="_blank" rel="noopener noreferrer">Github</a>, and by email at <a href="mailto:madison.hardt@hey.com" alt="madison.hardt@hey.com" target="_blank" rel="noopener noreferrer">madison.hardt@hey.com</a>.</p>
+            <p>Built with React.js and CSS by <a href="http://madisonhardt.com" alt="Madison Hardt" target="_blank" rel="noopener noreferrer">Madison Hardt</a>. She can be found on <a href="https://twitter.com/madisonmonteze" alt="@madisonmonteze" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="https://github.com/madisonmonteze" alt="Github" target="_blank" rel="noopener noreferrer">Github</a>, and by email at <a href="mailto:madison.hardt@hey.com" alt="madison.hardt@hey.com" target="_blank" rel="noopener noreferrer">madison.hardt@hey.com</a>.</p>
           </div>
         </Modal>
         <button type='button' onClick={this.showModal}>About</button>
